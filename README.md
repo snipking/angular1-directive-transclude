@@ -1,18 +1,15 @@
-# angular1-onsen-typescript-webpack
+# angular1-directive-transclude
 
-[![Dependency Status](https://david-dm.org/snipking/angular1-onsen-typescript-webpack/status.svg)](https://david-dm.org/snipking/angular1-onsen-typescript-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/snipking/angular1-onsen-typescript-webpack/dev-status.svg)](https://david-dm.org/snipking/angular1-onsen-typescript-webpack#info=devDependencies)
+[![Dependency Status](https://david-dm.org/snipking/angular1-directive-transclude/status.svg)](https://david-dm.org/snipking/angular1-directive-transclude#info=dependencies) [![devDependency Status](https://david-dm.org/snipking/angular1-directive-transclude/dev-status.svg)](https://david-dm.org/snipking/angular1-directive-transclude#info=devDependencies)
 
-A seed template for angular1 & onsenui & typescript & webpack project
+A branch based on [angular1-onsen-typescript-webpack](https://github.com/snipking/angular1-onsen-typescript-webpack.git)
 
-This project is a starting point for building Angular 1.x applications with onsenui, typescript and webpack. Also for further
+Shows 2 use case for angular directive transclude
 
-1. [angular1-onsen](https://github.com/snipking/angular1-onsen.git)  
-2. [angular1-onsen-webpack](https://github.com/snipking/angular1-onsen-webpack.git)  
-3. angular1-onsen-typescript-webpack  
+1. use ng-transclude with static directive template
+2. use ngTranscludeFn in directive link function which load template dynamically and can be changed runtime
 
-learning course.
-
->Warning: Make sure you're using the latest version of Node.js and NPM
+> Warning: Make sure you're using the latest version of Node.js and NPM
 
 ### Quick start
 
@@ -20,10 +17,10 @@ learning course.
 
 ```bash
 # clone repo
-$ git clone https://github.com/snipking/angular1-onsen-typescript-webpack.git angular1-onsen-typescript-webpack
+$ git clone https://github.com/snipking/angular1-directive-transclude.git angular1-directive-transclude
 
 # change directory to app root
-$ cd angular1-onsen-typescript-webpack
+$ cd angular1-directive-transclude
 
 # install the dependencies with npm
 $ npm install
@@ -59,6 +56,7 @@ What you need to run this app:
 
 * `npm install` to install build environment dependencies
 * `bower install` to install javascript library dependencies
+> choice angular >= 1.5.x if necessary
 
 ## Running the app
 
