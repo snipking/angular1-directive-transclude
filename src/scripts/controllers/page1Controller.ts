@@ -34,42 +34,12 @@ export class page1Controller {
     constructor(private $scope: Page1ControllerInterface, private $log: ng.ILogService, private $ocLazyLoad: oc.ILazyLoad, private $window: GlobalDefinitionInterface, private service1: Service1Interface) {
         $scope.events = this;
     }
-
-    pushPage() {
-        let $log = this.$log;
-        let $ocLazyLoad = this.$ocLazyLoad;
-        let $window = this.$window;
-        let service1 = this.service1;
-//        require.ensure(["./page2Controller"], function(require) {
-//            // load script
-//            var page2Controller = require("./page2Controller");
-//            // inject angular module to current app module
-//            $ocLazyLoad.inject(cordovaApp.name).then(function(args: any) {
-//                $log.debug('will push page');
-//                $window.globalNavigator.pushPage('pages/page2.html', { animation: 'slide' });
-//            }, function(err: any) {
-//                $log.error(err);
-//            });
-//        }, "page2module");
-        require.ensure(["../modules/page2Module"], function(require) {
-            service1.printToLog("Async load module '../modules/page2Module'");
-            // load script
-            var page2Module = require("../modules/page2Module");
-            // inject angular module to current app module
-            $ocLazyLoad.inject('app.page2Module').then(function(args: any) {
-                service1.printToLog("will push page");
-                $window.globalNavigator.pushPage('pages/page2.html', { animation: 'slide' });
-            }, function(err: any) {
-                $log.error(err);
-            });
-        }, "page2module");
-    }
     
     pushPageToTransclude() {
         let $log = this.$log;
         let $ocLazyLoad = this.$ocLazyLoad;
         let $window = this.$window;
-        require.ensure(["../modules/page2Module"], function(require) {
+        require.ensure(["../modules/transcludeModule"], function(require) {
             // load script
             var page2Module = require("../modules/transcludeModule");
             // inject angular module to current app module
@@ -85,16 +55,16 @@ export class page1Controller {
         let $log = this.$log;
         let $ocLazyLoad = this.$ocLazyLoad;
         let $window = this.$window;
-        require.ensure(["../modules/page2Module"], function(require) {
+        require.ensure(["../modules/transcludeModule"], (require) => {
             // load script
-            var page2Module = require("../modules/transcludeModule");
+            var transcludeModule = require("../modules/transcludeModule");
             // inject angular module to current app module
             $ocLazyLoad.inject('app.transcludeModule').then(function(args: any) {
                 $window.globalNavigator.pushPage('pages/transcludeDynamic.html', { animation: 'slide' });
             }, function(err: any) {
                 $log.error(err);
             });
-        }, "page2module");
+        }, "transcludeModule");
     }
 }
 

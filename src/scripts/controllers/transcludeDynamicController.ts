@@ -31,7 +31,7 @@ export class transcludeDynamicController {
         $scope.events = this;
         $scope.foo = "foo-slot1";
         $scope.bar = "bar-slot2";
-        $scope.layout = "tplTopBottom";
+        $scope.layout = "tplTopBottomDynamic";
     }
     
     popPage() {
@@ -40,10 +40,10 @@ export class transcludeDynamicController {
     }
     
     changeLayout() {
-        if(this.$scope.layout === 'tplLeftRight') {
-            this.$scope.layout = 'tplTopBottom'
+        if(this.$scope.layout === 'tplLeftRightDynamic') {
+            this.$scope.layout = 'tplTopBottomDynamic'
         } else {
-            this.$scope.layout = 'tplLeftRight'
+            this.$scope.layout = 'tplLeftRightDynamic'
         }
     }
 }

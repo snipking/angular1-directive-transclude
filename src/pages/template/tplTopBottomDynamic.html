@@ -13,9 +13,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<div style="display: flex; justify-content: space-around">
+<div style="display: flex; justify-content: space-around; flex-flow: column nowrap;">
 <!--    <div ng-transclude="slot1" style="flex: 1 auto;"></div>
     <div ng-transclude="slot2" style="flex: 1 auto;"></div>-->
-    <div ng-transclude="slot1" style="flex: 1 auto;"></div>
-    <div ng-transclude="slot2" style="flex: 1 auto;"></div>
+    <div hng-transclude-dynamic="hng-transclude-slot1" style="flex: 1 auto;"></div>
+    <div hng-transclude-dynamic="hng-transclude-slot2" style="flex: 1 auto;"></div>
 </div>
+

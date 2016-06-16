@@ -2,17 +2,13 @@
     <ons-toolbar>
         <div class="center">Simple Navigation</div>
     </ons-toolbar>
-    <div style="text-align: center; display: flex; flex-flow: column nowrap">
-        <br>
-        <ons-button modifier="light" ng-click="events.pushPage()">
-            Push to Page2
-        </ons-button>
-        <ons-button modifier="light" ng-click="events.pushPageToTransclude()">
+    <div style="text-align: center; display: flex; flex-flow: column nowrap; ">
+        <ons-button modifier="light" ng-click="events.pushPageToTransclude()" style="margin: 10px 10px 0px 10px;">
             Push to Transclude
         </ons-button>
-        <ons-button modifier="light" ng-click="events.pushPageToTranscludeDynamic()">
+        <ons-button modifier="light" ng-click="events.pushPageToTranscludeDynamic()" style="margin: 10px 10px 0px 10px;">
             Push to Transclude Dynamic
         </ons-button>
-        <div class="testcss" style="border: 1px solid; margin-top: 10px;"> test </div>
+        <div class="testcss" style="border: 1px solid; margin-top: 10px; margin: 10px 10px 0px 10px;"> test </div>
     </div>
 </ons-page>
